@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "365582344863",
+    "firebase_url": "https://gaurdian-d5f2c.firebaseio.com",
+    "project_id": "gaurdian-d5f2c",
+    "storage_bucket": "gaurdian-d5f2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365582344863:android:d68faf67e1c7c029",
+        "android_client_info": {
+          "package_name": "capstone.uwm.com.gaurdian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365582344863-frnb5vc6u5uuv2ffilv9lei2gdqknn0o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "capstone.uwm.com.gaurdian",
+            "certificate_hash": "b6d4aea05c55e4e71accfaa096820cfced80398f"
+          }
+        },
+        {
+          "client_id": "365582344863-eg0l7edmii0mrqmbc935cdn9gf6p6v27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2UQx3RO7xeIZjFla0e4e_NbMPtOrn8BQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365582344863-eg0l7edmii0mrqmbc935cdn9gf6p6v27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
