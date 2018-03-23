@@ -4,9 +4,7 @@ package capstone.uwm.com.gaurdian.SignIn;
 import android.app.ProgressDialog;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
-
 import capstone.uwm.com.gaurdian.R;
-
 
 public class BaseActivity extends AppCompatActivity {
 

@@ -28,7 +28,6 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import capstone.uwm.com.gaurdian.MainActivity;
 import capstone.uwm.com.gaurdian.R;
 
-
 /**
  * Demonstrate Firebase Authentication using a Google ID Token.
  */
