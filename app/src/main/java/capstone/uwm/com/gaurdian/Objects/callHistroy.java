@@ -7,10 +7,11 @@ import java.util.Date;
  * Created by Anitha on 3/5/2018.
  */
 
-public class callHistroy {
+public class CallHistroy {
+
     String phoneNumber;
     String mode;
-    Time Duration;
+    Time duration;
     Date date;
 
     public String getPhoneNumber() {
@@ -26,7 +27,7 @@ public class callHistroy {
     }
 
     public Time getDuration() {
-        return Duration;
+        return duration;
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -38,7 +39,7 @@ public class callHistroy {
     }
 
     public void setDuration(Time duration) {
-        Duration = duration;
+        this.duration = duration;
     }
 
     public void setMode(String mode) {

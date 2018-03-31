@@ -4,7 +4,7 @@ package capstone.uwm.com.gaurdian.Objects;
  * Created by Anitha on 3/18/2018.
  */
 
-public class accountDetails {
+public class AccountDetails {
     String parentName;
     String childName;
     int childAge;

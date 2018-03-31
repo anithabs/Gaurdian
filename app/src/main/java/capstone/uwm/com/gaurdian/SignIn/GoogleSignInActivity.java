@@ -1,6 +1,5 @@
 package capstone.uwm.com.gaurdian.SignIn;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -31,6 +30,7 @@ import capstone.uwm.com.gaurdian.R;
 /**
  * Demonstrate Firebase Authentication using a Google ID Token.
  */
+
 public class GoogleSignInActivity extends BaseActivity implements
         GoogleApiClient.OnConnectionFailedListener,
         View.OnClickListener {
@@ -154,8 +154,8 @@ public class GoogleSignInActivity extends BaseActivity implements
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-    // [END signin]
 
+    // [END signin]
     private void signOut() {
         // Firebase sign out
         mAuth.signOut();
@@ -220,4 +220,5 @@ public class GoogleSignInActivity extends BaseActivity implements
             revokeAccess();
         }
     }
+
 }

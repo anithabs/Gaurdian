@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by Anitha on 3/5/2018.
  */
 
-public class appHistroy {
+public class AppHistory {
     String appName;
     Date installedDate;
 
