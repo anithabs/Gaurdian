@@ -6,10 +6,10 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
@@ -19,27 +19,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".FeedInformation"></activity>
-        <activity android:name=".SignIn.GoogleSignInActivity"></activity>
-        <activity android:name=".SignIn.EmailPasswordActivity"></activity>
-        <activity android:name=".SignIn.BaseActivity"></activity>
-        <activity android:name=".LoginActivity"
+        <activity android:name=".MainActivity" />
+        <activity android:name=".FeedInformation" />
+        <activity android:name=".SignIn.GoogleSignInActivity" />
+        <activity android:name=".SignIn.EmailPasswordActivity" />
+        <activity android:name=".SignIn.BaseActivity" />
+        <activity
+            android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name="capstone.uwm.com.gaurdian.GetDetails.MessageListner"
+        <activity android:name=".PushDateActivity" />
+
+        <receiver
+            android:name=".GetDetails.SmsReceiver"
             android:enabled="true"
-            android:permission="android.permission.BROADCAST_SMS"
-            android:exported="true">
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
             <intent-filter android:priority="2147483647">
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".CheckMessageActivity" />
+        <activity android:name=".Call.CallSearchActivity" />
+        <activity android:name=".Call.CallListActivity" />
+        <activity android:name=".Call.CallTotalSummaryActivity"/>
+
+            <!--
+            intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter
+            -->
+
+        <activity android:name=".Call.CallDurationActivity" />
+        <activity android:name=".Call.MainCallActivity" />
 
     </application>
 

@@ -15,20 +15,19 @@ public class UserPreference {
     private static String childName;
     private static String childBirthday;
     private static String parentRelation;
+    private static String device;
+    private static final String DEVICE_KEY = "deviceKey";
     private static final String PARENT_KEY = "parentKey";
     private static final String EMAIL_KEY ="emailKey";
     private static final String CHILD_KEY = "childType";
     private static final String CBIRTHDAY = "cbirthdayType";
     private static final String CRELATION = "childRelationType";
 
-    public UserPreference(Context context){
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        setParentName(pref.getString(PARENT_KEY, "parentName"));
-        setParEmailID(pref.getString(EMAIL_KEY,"emailID"));
-        setChildName(pref.getString(CHILD_KEY,"childName"));
-        setChildBirthday(pref.getString(CBIRTHDAY,"08-12-2014"));
-        setParentRelation(pref.getString(CRELATION,"mother"));
-
+    public static String getDevice() {
+        return device;
+    }
+    public static void setDeviceKey(String deviceKey) {
+        UserPreference.device = deviceKey;
     }
 
     public void setPreference(Context context){
@@ -36,11 +35,21 @@ public class UserPreference {
         SharedPreferences.Editor editor = pref.edit();
 
         editor.putString(PARENT_KEY, parentName);
+        editor.putString(DEVICE_KEY,device);
         editor.putString(EMAIL_KEY,parEmailID);
         editor.putString(CHILD_KEY,childName);
         editor.putString(CBIRTHDAY,childBirthday);
         editor.putString(CRELATION,parentRelation);
         editor.commit();
+    }
+    public UserPreference(Context context){
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
+        setParentName(pref.getString(PARENT_KEY, "parentName"));
+        setParEmailID(pref.getString(EMAIL_KEY,"emailID"));
+        setChildName(pref.getString(CHILD_KEY,"childName"));
+        setChildBirthday(pref.getString(CBIRTHDAY,"08-12-2014"));
+        setParentRelation(pref.getString(CRELATION,"mother"));
+        setDeviceKey(pref.getString(DEVICE_KEY,"children"));
     }
 
     public static void setParentName(String name) {

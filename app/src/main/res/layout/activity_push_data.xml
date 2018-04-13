@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:id="@+id/MainLayout"
+    android:background="@android:color/background_light">
+
+    <LinearLayout style="@style/LinearLayoutHeader">
+        <LinearLayout
+            style="@style/LinearLayout"
+            android:weightSum="1">
+            <Button
+                android:id="@+id/UpdateInformation"
+                style="@style/Button"
+                android:text="Update Account Details"
+                android:onClick="updateDetails"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout style="@style/LinearLayoutHeader">
+        <LinearLayout
+            style="@style/LinearLayout"
+            android:weightSum="1">
+            <Button
+                android:id="@+id/enableTracking"
+                style="@style/Button"
+                android:text="Enable Tracking"
+                android:onClick="enableTracking"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout style="@style/LinearLayoutHeader">
+        <LinearLayout
+            style="@style/LinearLayout"
+            android:weightSum="1">
+            <Button
+                android:id="@+id/disableTracking"
+                style="@style/Button"
+                android:text="Disable Tracking"
+                android:onClick="disableTracking"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

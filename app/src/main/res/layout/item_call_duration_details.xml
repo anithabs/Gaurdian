@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content"
+    android:orientation = "vertical">
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "10dp"
+        android:gravity = "center"
+        android:orientation = "horizontal">
+        <LinearLayout
+            android:layout_width = "150dp"
+            android:layout_height = "wrap_content"
+            android:background = "?attr/selectableItemBackgroundBorderless"
+            android:orientation = "horizontal"
+            android:padding = "4dp">
+            <TextView
+                android:id = "@+id/rvs_duration_phone_no"
+                android:layout_width = "150dp"
+                android:layout_height = "wrap_content"
+                style = "@style/TextStyle" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width = "110dp"
+            android:layout_height = "wrap_content"
+            android:background = "?attr/selectableItemBackgroundBorderless"
+            android:orientation = "horizontal"
+            android:padding = "4dp">
+            <TextView
+                android:id = "@+id/rvs_duration_outing_total_call"
+                android:layout_width = "110dp"
+                android:layout_height = "wrap_content"
+                style = "@style/TextStyle" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width = "110dp"
+            android:layout_height = "wrap_content"
+            android:background = "?attr/selectableItemBackgroundBorderless"
+            android:orientation = "horizontal"
+            android:padding = "4dp">
+            <TextView
+                android:id = "@+id/rvs_duration_incoming_total_call"
+                android:layout_width = "110dp"
+                android:layout_height = "wrap_content"
+                style = "@style/TextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "1dp"
+        android:background = "#AAA">
+    </LinearLayout>
+</LinearLayout>

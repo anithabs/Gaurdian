@@ -1,8 +1,5 @@
 package capstone.uwm.com.gaurdian.Objects;
 
-import java.sql.Time;
-import java.util.Date;
-
 /**
  * Created by Anitha on 3/5/2018.
  */
@@ -10,26 +7,26 @@ import java.util.Date;
 public class BrowsingHistroy {
 
     String browseLog;
-    Date browseDate;
-    Time browseTime;
+    String browseTitle;
+    String browseDate;
 
-    public Date getBrowseDate() {
+    public String getBrowseDate() {
         return browseDate;
     }
 
-    public Time getBrowseTime(){
-        return browseTime;
+    public String getBrowseTitle(){
+        return browseTitle;
     }
 
     public String getBrowseLog() {
         return browseLog;
     }
 
-    public void setBrowseTime(Time browseTime){
-        this.browseTime = browseTime;
+    public void setBrowseTime(String browseTitle){
+        this.browseTitle = browseTitle;
     }
 
-    public void setBrowseDate(Date browseDate) {
+    public void setBrowseDate(String browseDate) {
         this.browseDate = browseDate;
     }
 

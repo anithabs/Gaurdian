@@ -5,11 +5,11 @@
     <!-- Strings related to login -->
 
 
-
-
-
-
-
+    <string-array name="menu_login_option">
+        <item>Child</item>
+        <item>Parent</item>
+    </string-array>
+    <string name="select_device">Select the device owner</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -89,7 +89,8 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
-
+    <string name="title_activity_call_total_summary">CallTotalSummary</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>

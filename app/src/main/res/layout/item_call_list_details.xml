@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:orientation="horizontal"
+            android:padding="4dp">
+            <TextView
+                android:id="@+id/rvs_date_list_call_details"
+                android:layout_width="125dp"
+                android:layout_height="30dp"
+                style="@style/TextStyle" />
+            <TextView
+                android:id="@+id/rvs_incoming_list_call_details"
+                android:layout_width="125dp"
+                android:layout_height="30dp"
+                style="@style/TextStyle" />
+            <TextView
+                android:id="@+id/rvs_outgoing_list_call_details"
+                android:layout_width="125dp"
+                android:layout_height="30dp"
+                style="@style/TextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AAA">
+    </LinearLayout>
+</LinearLayout>

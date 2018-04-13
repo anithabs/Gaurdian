@@ -1,30 +1,47 @@
 package capstone.uwm.com.gaurdian.Objects;
 
-import java.util.Date;
-
 /**
  * Created by Anitha on 3/5/2018.
  */
 
 public class MessageHistroy {
-    String fromContent;
-    String fromNumber;
-    String toContent;
-    String toNumber;
-    Date date;
+    private String fromContent;
+    private String fromNumber;
+    private String toContent;
+    private String toNumber;
+    private String date;
+    private String key;
 
-    public MessageHistroy( String _fromContent, String _fromNumber, String _toContent, String _toNumber ,Date _date){
+    public MessageHistroy( String _fromContent, String _fromNumber, String _toContent, String _toNumber , String _date ,String _key){
+        setFromContent(_fromContent);
+        setFromNumber(_fromNumber);
+        setToContent(_toContent);
+        setToNumber(_toNumber);
+        setDate(_date);
+        setKey(_key);
+    }
+
+    public MessageHistroy( String _fromContent, String _fromNumber, String _toContent, String _toNumber , String _date ){
         setFromContent(_fromContent);
         setFromNumber(_fromNumber);
         setToContent(_toContent);
         setToNumber(_toNumber);
         setDate(_date);
     }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
     public String getFromContent(){
         return fromContent;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -56,7 +73,7 @@ public class MessageHistroy {
         this.toNumber = toNumber;
     }
 
-    public void setDate(Date date){
+    public void setDate(String date){
         this.date = date;
     }
 }

@@ -171,8 +171,8 @@
                 style="@style/Button"
                 android:layout_gravity="center"
                 android:layout_marginLeft="130dp"
-                android:onClick="gaurdianCreateAccount"
-                android:text="Create Account"
+                android:onClick="gaurdianUpdateAccount"
+                android:text="updateAccount"
                 android:visibility="visible" />
         </LinearLayout>
 

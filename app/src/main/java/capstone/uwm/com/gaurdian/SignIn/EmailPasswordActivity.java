@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import capstone.uwm.com.gaurdian.MainActivity;
+import capstone.uwm.com.gaurdian.PushDateActivity;
 import capstone.uwm.com.gaurdian.R;
 
 public class EmailPasswordActivity extends BaseActivity implements
@@ -55,7 +55,7 @@ public class EmailPasswordActivity extends BaseActivity implements
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+        // Check if user is signed in (non-null) and updateCall UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
@@ -73,7 +73,7 @@ public class EmailPasswordActivity extends BaseActivity implements
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                            // Sign in success, updateCall UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
@@ -104,7 +104,7 @@ public class EmailPasswordActivity extends BaseActivity implements
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                            // Sign in success, updateCall UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             EnterMainPage();
@@ -179,7 +179,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         return valid;
     }
     private void EnterMainPage() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, PushDateActivity.class);
         startActivity(intent);
     }
 

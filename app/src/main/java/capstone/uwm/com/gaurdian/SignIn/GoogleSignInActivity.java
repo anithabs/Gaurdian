@@ -24,7 +24,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import capstone.uwm.com.gaurdian.MainActivity;
+import capstone.uwm.com.gaurdian.Call.MainCallActivity;
+import capstone.uwm.com.gaurdian.PushDateActivity;
 import capstone.uwm.com.gaurdian.R;
 
 /**
@@ -37,6 +38,7 @@ public class GoogleSignInActivity extends BaseActivity implements
 
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
+    private String device;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -50,6 +52,8 @@ public class GoogleSignInActivity extends BaseActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google);
+        Bundle bundle = getIntent().getExtras();
+        device = bundle.getString("deviceDetails");
 
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
@@ -58,7 +62,7 @@ public class GoogleSignInActivity extends BaseActivity implements
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
-        findViewById(R.id.disconnect_button).setOnClickListener(this);
+       // findViewById(R.id.disconnect_button).setOnClickListener(this);
 
         // [START config_signin]
         // Configure Google Sign In
@@ -82,7 +86,7 @@ public class GoogleSignInActivity extends BaseActivity implements
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+        // Check if user is signed in (non-null) and updateCall UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
@@ -101,7 +105,7 @@ public class GoogleSignInActivity extends BaseActivity implements
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
             } else {
-                // Google Sign In failed, update UI appropriately
+                // Google Sign In failed, updateCall UI appropriately
                 // [START_EXCLUDE]
                 updateUI(null);
                 // [END_EXCLUDE]
@@ -123,7 +127,7 @@ public class GoogleSignInActivity extends BaseActivity implements
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                            // Sign in success, updateCall UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             EnterMainPage();
@@ -144,8 +148,13 @@ public class GoogleSignInActivity extends BaseActivity implements
     }
 
     private void EnterMainPage() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        if(device.equals("child")) {
+            Intent intent = new Intent(this, PushDateActivity.class);
+            startActivity(intent);
+        }else {
+            Intent intent = new Intent(this, MainCallActivity.class);
+            startActivity(intent);
+        }
     }
     // [END auth_with_google]
 
@@ -216,9 +225,9 @@ public class GoogleSignInActivity extends BaseActivity implements
             signIn();
         } else if (i == R.id.sign_out_button) {
             signOut();
-        } else if (i == R.id.disconnect_button) {
+        }/* else if (i == R.id.disconnect_button) {
             revokeAccess();
-        }
+        }*/
     }
 
 }

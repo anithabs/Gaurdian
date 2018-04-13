@@ -7,11 +7,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="TextView" parent="@android:style/TextAppearance">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:textColor">@color/colorMotto</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
     </style>
 
     <style name="TextViewAdd" parent="@android:style/TextAppearance">
@@ -22,10 +23,11 @@
         <item name="android:padding">3dp</item>
         <item name="android:textColor">@color/colorMotto</item>
     </style>
+
     <style name="Button" parent="@android:style/TextAppearance">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">40dp</item>
-        <item name="android:background">@color/colorMotto</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
         <item name="android:textSize">15dp</item>
         <item name="android:layout_gravity">center_vertical|center_horizontal</item>
         <item name="android:orientation">horizontal</item>
@@ -49,18 +51,38 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="EditTextFragment" parent="android:style/TextAppearance">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
+        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
+    </style>
+
     <style name="EditTextN" parent="@android:style/TextAppearance">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">25dp</item>
         <item name="android:layout_gravity">left</item>
         <item name="android:imeOptions">actionDone</item>
     </style>
 
+    <style name="TextStyle" parent="@android:style/TextAppearance">
+        <item name="android:layout_gravity">left</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 
-
-
+    <style name="LinearLayoutHeader" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal|center_vertical</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
     <!-- Activity with no Title -->
     <style name="ThemeOverlay.MyNoTitleActivity" parent="AppTheme">
         <item name="windowActionBar">false</item>
@@ -76,7 +98,7 @@
     </style>
 
     <!-- Light EditTexts -->
-    <style name="ThemeOverlay.MyLightEditText" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="ThemeOverlay.MyLightEditText" parent="ThemeOverlay.AppCompat.Dark" />
 
     <style name="ThemeOverlay.MyTextDetail" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
@@ -98,5 +120,9 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">36sp</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

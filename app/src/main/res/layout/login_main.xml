@@ -4,6 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,28 +16,11 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="327dp"
-                app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
-                android:layout_weight="1" />
+                android:layout_height="272dp"
+                app:srcCompat="@drawable/gaurdian" />
         </LinearLayout>
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="40dp"
-        android:orientation="horizontal">
-            <Button
-                android:id="@+id/button_fb_login"
-                style="@style/Button"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:onClick="FireBaseLogin"
-                android:text="Fire Base Signin" />
-
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,13 +28,30 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         android:paddingTop="40dp"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/button_google_login"
+            android:id="@+id/button_child_google_login"
+            android:layout_width="250dp"
+            android:textSize="20dp"
             style="@style/Button"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:onClick="GoogleLogin"
-            android:text="Google Signin" />
-
+            android:onClick="ChildDeviceLogin"
+            android:text="Child Device >>" />
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button_parent_google_login"
+            android:layout_width="250dp"
+            style="@style/Button"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:onClick="ParentDeviceLogin"
+            android:text="Parent Device >>" />
+        </LinearLayout>
+    </LinearLayout>
